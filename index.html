@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filter Editor</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><i class="ri-image-edit-line"></i> Image Filter Editor</h1>
+        </header>
+        <section>
+            <div class="left">
+                <div class="top">
+                   <label for="image-input" class="btn btn-primary">
+                       <i class="ri-upload-2-line"></i> Choose Image
+                       <input type="file" id="image-input" accept="image/*" hidden>
+                   </label>
+                   <button class="btn btn-danger" id="reset-btn">
+                       <i class="ri-restart-line"></i> Reset
+                   </button>
+                   <button class="btn btn-success" id="download-btn">
+                       <i class="ri-download-2-line"></i> Download
+                   </button>
+                </div>
+                <div class="bottom">
+                    <div class="placeholder">
+                        <i class="ri-folder-image-line"></i>
+                        <p>No Image Chosen</p>
+                        <span>Upload an image to start editing</span>
+                    </div>
+                    <canvas id="image-canvas"></canvas>
+                </div>
+            </div>
+            <div class="right">
+                <div class="filter-container">
+                    <h2><i class="ri-brush-line"></i> Filters</h2>
+                    <div class="filters"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
